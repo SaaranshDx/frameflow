@@ -9,6 +9,7 @@ const port = 3000
 async function render(prompt, id) {
     const scene = await compilations.generate(prompt);
     fs.writeFile(`Renders/${id}.html`, scene, err => {
+      // write the html to video functionality here
   if (err) {
     console.error(err);
   } else {
